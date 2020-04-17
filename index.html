@@ -1,15 +1,28 @@
 <html>
+  <head>
+    <title>Confinement: quand est-ce que c'est fini ?</title>
+    <style type="text/css">
+      .countdown-box {
+          box-sizing: border-box;
+          padding: 0 20%;
+          text-align: center;
+          width: 100%;
+          font-size: 63px;
+          font-family: omnes-pro,sans-serif;
+          font-weight: bold;
+          color: #333;
+      }
+      h1 {
+          font-size: 1em;
+          font-weight: 500;
+      }
+    </style>
+  </head>
   <body>
-
-    <p style="
-              box-sizing: border-box;
-              padding: 0 15vw;
-              text-align: center;
-              width: 100vw;
-              font-size: 63px;
-              font-family: omnes-pro,sans-serif;
-              font-weight: 500;
-              " id="countdown"></p>
+    <div class="countdown-box">
+      <h1>Combien de temps avant la fin du confinement ?</h1>
+      <p id="countdown"></p>
+    </div>
 
     <script>
       // Set the date we're counting down to
@@ -37,7 +50,7 @@
           // If the count down is finished, write some text
           if (distance < 0) {
               clearInterval(x);
-              document.getElementById("countdown").innerHTML = "🎉";
+              document.getElementById("countdown").innerHTML = "Fini 🎉";
           }
       }, 1000);
     </script>
